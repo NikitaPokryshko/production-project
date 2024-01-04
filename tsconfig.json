@@ -1,11 +1,46 @@
 {
   "compilerOptions": {
+    // Bundle output (in this case I build using webpack)
     "outDir": "./dist/",
+
+    // Doesn't allow variables without specific type
     "noImplicitAny": true,
+
+    // Modules system: 'ESNext', 'CommonJS' and etc..
     "module": "es6",
+
+    // Specifies target JS version
     "target": "es5",
+
     "jsx": "react",
+
+    // Allows to work with both: JS and JSX and TS files
     "allowJs": true,
-    "moduleResolution": "node"
+
+
+    "moduleResolution": "node",
+
+
+    // Allows to work with common js modules as with normal modules
+    // (import instead require / module.exports)
+    "esModuleInterop": true,
+
+
+
+    // Add default imports for node packages
+
+    // From:
+    // import * as path from 'path'
+    // import * as webpack from 'webpack'
+
+    // To:
+    // import path from 'path'
+    // import webpack from 'webpack'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   }
 }
