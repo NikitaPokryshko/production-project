@@ -20,6 +20,8 @@
 
     "moduleResolution": "node",
 
+    // "baseUrl": ".", // TODO: set a value
+
 
     // Allows to work with common js modules as with normal modules
     // (import instead require / module.exports)
