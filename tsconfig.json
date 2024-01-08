@@ -12,7 +12,7 @@
     // Specifies target JS version
     "target": "es5",
 
-    "jsx": "react",
+    "jsx": "react-jsx",
 
     // Allows to work with both: JS and JSX and TS files
     "allowJs": true,

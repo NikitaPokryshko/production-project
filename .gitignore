@@ -1,2 +1,9 @@
+# Build folders
 /build
+
+# NPM & node_modules
 /node_modules
+node_modules
+
+# Mac OS trash
+.DS_Store
