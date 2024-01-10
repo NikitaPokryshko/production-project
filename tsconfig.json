@@ -7,7 +7,8 @@
     "noImplicitAny": true,
 
     // Modules system: 'ESNext', 'CommonJS' and etc..
-    "module": "es6",
+
+    "module": "ESNext", // Was: "module": "es6",
 
     // Specifies target JS version
     "target": "es5",
