@@ -23,14 +23,14 @@
     // "baseUrl": ".", // TODO: set a value
 
 
-    // Allows to work with common js modules as with normal modules
-    // (import instead require / module.exports)
+    /**
+    * Allows to work with common js modules as with normal modules
+    * (import instead require / module.exports)
+    */
     "esModuleInterop": true,
 
 
-
-    // Add default imports for node packages
-
+    /** Add default imports for node packages */
     // From:
     // import * as path from 'path'
     // import * as webpack from 'webpack'
@@ -38,7 +38,15 @@
     // To:
     // import path from 'path'
     // import webpack from 'webpack'
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+
+
+    // Enables code completion for CSS modules classes (use workspace typescript plugin in your editor)
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "ts-node": {
     "compilerOptions": {
