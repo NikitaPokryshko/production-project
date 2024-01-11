@@ -1,14 +1,24 @@
-import { Suspense } from 'react'
+import { Suspense, useContext, useState } from 'react'
 import { Route, Routes, Link } from 'react-router-dom'
 
 import { AboutPageLazy } from './pages/AboutPage/AboutPage.lazy'
 import { MainPageLazy } from './pages/MainPage/MainPage.lazy'
 
-import './index.scss'
+import { useTheme } from './theme/useTheme'
+
+import './styles/index.scss'
+
+export enum Theme {
+  LIGHT = 'light',
+  DARK = 'dark'
+}
 
 const App = () => {
+  const { theme, toggleTheme} = useTheme()
+
   return (
-    <div className="app">
+    <div className={`app ${theme}`}>
+      <button onClick={toggleTheme}>TOGGLE</button>
       <Link to="/">Main</Link>
       <Link to="/about">About</Link>
 
