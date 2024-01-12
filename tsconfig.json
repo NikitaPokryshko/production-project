@@ -21,8 +21,11 @@
 
     "moduleResolution": "node",
 
-    // "baseUrl": ".", // TODO: set a value
-
+    // Set rule for absolute imports / exports -> root folder to absolute imports is "src"
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
 
     /**
     * Allows to work with common js modules as with normal modules

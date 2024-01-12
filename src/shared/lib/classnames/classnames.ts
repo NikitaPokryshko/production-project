@@ -11,6 +11,8 @@ export function classNames(cls: string, mods: Mods, additional: string[]): strin
     .join(' ')
 }
 
-classNames('remove-btn', { hovered: true, selectable: true, red: false }, ['pgd'])
+// Usage
+// classNames('remove-btn', { hovered: true, selectable: true, red: false }, ['pgd'])
 
-'remove-btn hovered selectable pdg'
+// Result
+// 'remove-btn hovered selectable pdg'
