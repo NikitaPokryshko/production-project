@@ -1,3 +1,44 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // Settings for "Folder Templates" plugin. Create inner .tsx component structure with namings in one click
+  "folderTemplates.structures": [
+    {
+      "name": "tsx + scss.module",
+      "omitParentDirectory": true,
+      "structure": [
+        // { "fileName": "<FTName|pascalcase>/__tests__/<FTName|pascalcase>.test.ts" },
+        { "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.tsx", "template": "TS_FC" },
+        { "fileName": "<FTName|pascalcase>/<FTName|pascalcase>.module.scss", "template": "SCSS" },
+        { "fileName": "<FTName|pascalcase>/index.ts", "template": "TS_INDEX" }
+      ]
+    }
+  ],
+  "folderTemplates.fileTemplates": {
+    "TS_FC": [
+      "import { classNames } from 'shared/lib/classnames/classnames'\n",
+
+			"import cls from './<FTName|pascalcase>.module.scss'\n",
+
+			"interface I<FTName|pascalcase>Props {",
+			"  className?: string",
+			"}\n",
+
+			"const <FTName|pascalcase>: React.FC<I<FTName|pascalcase>Props> = (props) => {",
+			"  return (",
+			"    <div className={classNames(cls.<FTName|camelcase>, {}, [props.className])}>",
+			"      {/* TODO */}",
+			"    </div>",
+			"  )",
+			"}\n",
+
+      "export { <FTName|pascalcase> };"
+    ],
+    "SCSS": [
+      ".<FTName|camelcase> {",
+      "   background-color: initial;",
+      "}",
+    ],
+    "TS_INDEX": "export { <FTName|pascalcase> } from './<FTName|pascalcase>'"
+  }
 }
