@@ -7,7 +7,6 @@
     "noImplicitAny": true,
 
     // Modules system: 'ESNext', 'CommonJS' and etc..
-
     "module": "ESNext", // Was: "module": "es6",
 
     // Specifies target JS version
@@ -17,7 +16,6 @@
 
     // Allows to work with both: JS and JSX and TS files
     "allowJs": true,
-
 
     "moduleResolution": "node",
 

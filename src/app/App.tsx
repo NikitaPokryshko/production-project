@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+
 import { useTheme } from 'app/providers/ThemeProvider'
 import { AppRouter } from 'app/providers/router'
 
@@ -13,11 +15,14 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
-      <div className="content-page">
-        <Sidebar />
-        <AppRouter />
-      </div>
+      {/* TODO: Consider moving this <Suspense> wrapper up or down */}
+      <Suspense fallback="Locales are loading...">
+        <Navbar />
+        <div className="content-page">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
     </div>
   )
 }

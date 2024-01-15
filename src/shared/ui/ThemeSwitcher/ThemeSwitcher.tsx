@@ -11,6 +11,7 @@ interface IThemeSwitcherProps {
   className?: string
 }
 
+// TODO: Move to "widgets" folder
 const ThemeSwitcher: React.FC<IThemeSwitcherProps> = (props) => {
   const { toggleTheme, theme } = useTheme()
 

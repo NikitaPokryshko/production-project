@@ -14,7 +14,7 @@
 // 2 option
 declare module "*.module.css";
 declare module "*.module.scss";
-////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 
 
 // File types declaration
@@ -35,4 +35,8 @@ declare module "*.svg" {
 
   export default SVG;
 }
+/////////////////////////////////////////////////////////////
 
+
+// Global custom constants
+declare const __IS_DEV__: boolean;
